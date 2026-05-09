@@ -109,7 +109,7 @@ def _run_one(args: tuple) -> dict:
     except RuntimeError:
         return None
 
-    if len(df) < 1000:  # skip slices with too little data
+    if len(df) < 50:  # skip slices with too little data
         return None
 
     sig = strat.signal(df)
